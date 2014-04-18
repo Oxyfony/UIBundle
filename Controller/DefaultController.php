@@ -23,7 +23,7 @@
  * SOFTWARE.
  *
  */
-namespace Oxygen\Bundle\UIBundle\Controller;
+namespace O2\Bundle\UIBundle\Controller;
 
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 
@@ -37,6 +37,6 @@ class DefaultController extends Controller
 {
     public function indexAction($name = 'Outremerbox')
     {
-        return $this->render('OxygenUIBundle:Default:index.html.twig', array('name' => $name));
+        return $this->render('O2UIBundle:Default:index.html.twig', array('name' => $name));
     }
 }

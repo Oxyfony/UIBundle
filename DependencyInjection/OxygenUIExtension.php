@@ -23,7 +23,7 @@
  * SOFTWARE.
  *
  */
-namespace Oxygen\Bundle\UIBundle\DependencyInjection;
+namespace O2\Bundle\UIBundle\DependencyInjection;
 
 use Symfony\Component\DependencyInjection\ContainerBuilder;
 use Symfony\Component\Config\FileLocator;
@@ -35,7 +35,7 @@ use Symfony\Component\DependencyInjection\Loader;
  *
  * To learn more see {@link http://symfony.com/doc/current/cookbook/bundles/extension.html}
  */
-class OxygenUIExtension extends Extension
+class O2UIExtension extends Extension
 {
     /**
      * {@inheritDoc}

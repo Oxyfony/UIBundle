@@ -23,7 +23,7 @@
  * SOFTWARE.
  *
  */
-namespace Oxygen\Bundle\UIBundle;
+namespace O2\Bundle\UIBundle;
 
 use Symfony\Component\HttpKernel\Bundle\Bundle;
 
@@ -33,4 +33,4 @@ use Symfony\Component\HttpKernel\Bundle\Bundle;
  * @author Nicolas Claverie <info@artscore-studio.fr>
  *
  */
-class OxygenUIBundle extends Bundle {}
+class O2UIBundle extends Bundle {}

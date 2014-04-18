@@ -23,7 +23,7 @@
  * SOFTWARE.
  *
  */
-namespace Oxygen\Bundle\UIBundle\Tests\Controller;
+namespace O2\Bundle\UIBundle\Tests\Controller;
 
 use Symfony\Bundle\FrameworkBundle\Test\WebTestCase;
 
