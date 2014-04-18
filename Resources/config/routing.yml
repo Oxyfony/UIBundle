@@ -1,0 +1,4 @@
+ui_welcome:
+    pattern:  /welcome
+    defaults: { _controller: 'OxygenUIBundle:Default:index' }
+
