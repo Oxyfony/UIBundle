@@ -1,1 +1,10 @@
-Hello {{ name }}!
+{% extends 'O2UIBundle::layout.html.twig' %}
+
+{% block body_content %}
+{{ parent() }}
+
+<div class="container">
+	<h2>Your Content</h2>
+	Hello {{ name }}!
+</div>
+{% endblock %}
