@@ -40,6 +40,7 @@ class TwbsThemingController extends Controller
 	 */
 	public function componentThemingAction()
 	{
+		$this->get('o2_ui.flash_message')->info('This is a flash message');
 		return $this->render('O2UIBundle:TwbsTheming:component_theming.html.twig', array());
 	}
 	

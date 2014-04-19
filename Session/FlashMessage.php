@@ -1,19 +1,19 @@
 <?php
 /**
  * The MIT License (MIT)
- *
+ * 
  * Copyright (c) 2014 Oxyfony
- *
+ * 
  * Permission is hereby granted, free of charge, to any person obtaining a copy
  * of this software and associated documentation files (the "Software"), to deal
  * in the Software without restriction, including without limitation the rights
  * to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
  * copies of the Software, and to permit persons to whom the Software is
  * furnished to do so, subject to the following conditions:
- *
+ * 
  * The above copyright notice and this permission notice shall be included in all
  * copies or substantial portions of the Software.
- *
+ * 
  * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
  * IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
  * FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
@@ -23,31 +23,51 @@
  * SOFTWARE.
  *
  */
-namespace O2\Bundle\UIBundle\DependencyInjection;
+namespace O2\Bundle\UIBundle\Session;
 
-use Symfony\Component\DependencyInjection\ContainerBuilder;
-use Symfony\Component\Config\FileLocator;
-use Symfony\Component\HttpKernel\DependencyInjection\Extension;
-use Symfony\Component\DependencyInjection\Loader;
-
+use Symfony\Component\HttpFoundation\Session\SessionInterface;
 /**
- * This is the class that loads and manages your bundle configuration
+ * Flash Messages
+ * 
+ * @author Nicolas Claverie winfo@artscore-studio.fr>
  *
- * To learn more see {@link http://symfony.com/doc/current/cookbook/bundles/extension.html}
  */
-class O2UIExtension extends Extension
+class FlashMessage
 {
-    /**
-     * {@inheritDoc}
-     */
-    public function load(array $configs, ContainerBuilder $container)
-    {
-        $configuration = new Configuration();
-        $config = $this->processConfiguration($configuration, $configs);
-
-        $loader = new Loader\XmlFileLoader($container, new FileLocator(__DIR__.'/../Resources/config'));
-        $loader->load('services.xml');
-        $loader->load('services/twig.xml');
-        $loader->load('services/session.xml');
-    }
+	protected $session;
+	
+	public function __construct(SessionInterface $session)
+	{
+		$this->session = $session;
+	}
+	
+	public function alert($message)
+	{
+		$this->session->getFlashBag()->add('alert', $message);
+	}
+	
+	public function success($message)
+	{
+		$this->session->getFlashBag()->add('success', $message);
+	}
+	
+	public function info($message)
+	{
+		$this->session->getFlashBag()->add('info', $message);
+	}
+	
+	public function warning($message)
+	{
+		$this->session->getFlashBag()->add('warning', $message);
+	}
+	
+	public function danger($message)
+	{
+		$this->session->getFlashBag()->add('danger', $message);
+	}
+	
+	public function reset()
+	{
+		$this->session->getFlashBag()->clear();
+	}
 }
