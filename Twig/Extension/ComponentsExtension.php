@@ -44,17 +44,12 @@ class ComponentsExtension extends \Twig_Extension
 	protected $template;
 	
 	/**
-	 * @var string
-	 */
-	protected $templatePath;
-	
-	/**
 	 * @param \Twig_Environment $twig
 	 */
 	public function __construct(\Twig_Environment $twig, $template_path)
 	{
 		$this->twig = $twig;
-		$this->templatePath = $template_path;
+		$this->template	= $this->twig->loadTemplate($template_path);
 	}
 	
 	/**
@@ -80,7 +75,6 @@ class ComponentsExtension extends \Twig_Extension
 	 */
 	public function badgeFunction($text)
 	{
-		$this->template	= $this->twig->loadTemplate($this->templatePath);
 		return $this->template->renderBlock('badge', array('text' => $text));
 	}
 	
@@ -93,7 +87,6 @@ class ComponentsExtension extends \Twig_Extension
 	 */
 	public function alertFunction($text, $type = 'default')
 	{
-		$this->template	= $this->twig->loadTemplate($this->templatePath);
 		return $this->template->renderBlock('alert', array('text' => $text, 'type' => $type));
 	}
 	
@@ -106,7 +99,6 @@ class ComponentsExtension extends \Twig_Extension
 	 */
 	public function labelFunction($text, $type = 'default')
 	{
-		$this->template	= $this->twig->loadTemplate($this->templatePath);
 		return $this->template->renderBlock('label', array('text' => $text, 'type' => $type));
 	}
 	
