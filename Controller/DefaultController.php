@@ -35,6 +35,11 @@ use Symfony\Bundle\FrameworkBundle\Controller\Controller;
  */
 class DefaultController extends Controller
 {
+	/**
+	 * Oxygen UI Bundle Homepage Controller
+	 * 
+	 * @param string $name
+	 */
     public function indexAction($name = 'Outremerbox')
     {
         return $this->render('O2UIBundle:Default:index.html.twig', array('name' => $name));

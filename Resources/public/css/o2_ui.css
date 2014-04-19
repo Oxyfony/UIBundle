@@ -1,0 +1,17 @@
+.twbs-datetime:after {
+	content: " ";
+	display:block;
+	clear:both
+}
+.twbs-datetime .twbs-date, .twbs-datetime .twbs-time  {
+	display:block;
+	float:left;
+	width:50%;
+	margin:0
+}
+.twbs-datetime .twbs-date > div, .twbs-datetime .twbs-time > div {
+	padding:0 5px 0 0
+}
+.twbs-datetime .twbs-date {
+	padding-right:15px
+}
