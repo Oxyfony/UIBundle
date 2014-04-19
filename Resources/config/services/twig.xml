@@ -1,0 +1,30 @@
+<?xml version="1.0" ?>
+
+<container xmlns="http://symfony.com/schema/dic/services"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://symfony.com/schema/dic/services http://symfony.com/schema/dic/services/services-1.0.xsd">
+
+	<parameters>
+		<parameter key="o2_ui.twig.form_extension.class">O2\Bundle\UIBundle\Twig\Extension\FormExtension</parameter>
+		<parameter key="o2_ui.twig.label_extension.class">O2\Bundle\UIBundle\Twig\Extension\LabelExtension</parameter>
+		<parameter key="o2_ui.twig.badge_extension.class">O2\Bundle\UIBundle\Twig\Extension\BadgeExtension</parameter>
+	</parameters>
+
+	<services>
+		
+		<service id="o2_ui.twig.form_extension" class="%o2_ui.twig.form_extension.class%">
+            <tag name="twig.extension" />
+        </service>
+	
+		<service id="o2_ui.twig.label_extension" class="%o2_ui.twig.label_extension.class%">
+            <tag name="twig.extension" />
+        </service>
+        
+        <service id="o2_ui.twig.badge_extension" class="%o2_ui.twig.badge_extension.class%">
+        	<argument type="service" id="service_container" />
+            <tag name="twig.extension" />
+        </service>
+	
+	</services>
+
+</container>
