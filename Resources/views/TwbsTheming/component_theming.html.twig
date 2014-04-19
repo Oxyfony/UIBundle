@@ -3,15 +3,18 @@
 {% block body_content %}
 
 <div class="container">
-			
-				<h2>Les labels</h2>
-				
-				Exemple de texte {{ o2_label('default') }}
-				Exemple de texte {{ o2_label('primary', 'primary') }}
-				Exemple de texte {{ o2_label('success', 'success') }}
-				Exemple de texte {{ o2_label('info', 'info') }}
-				Exemple de texte {{ o2_label('warning', 'warning') }}
-				Exemple de texte {{ o2_label('danger', 'danger') }}
+	<h2>Les alertes</h2>
+	
+	{{ o2_alert("Message d'alerte", 'danger') }}
+	
+	<h2>Les labels</h2>
+	
+	Exemple de texte {{ o2_label('default') }}
+	Exemple de texte {{ o2_label('primary', 'primary') }}
+	Exemple de texte {{ o2_label('success', 'success') }}
+	Exemple de texte {{ o2_label('info', 'info') }}
+	Exemple de texte {{ o2_label('warning', 'warning') }}
+	Exemple de texte {{ o2_label('danger', 'danger') }}
 			
 				<h2>Les badges</h2>
 				Exemple de texte {{ o2_badge(45) }}

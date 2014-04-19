@@ -1,0 +1,17 @@
+{% block alert %}
+{% spaceless %}
+<div class="alert alert-{{ type }}">{{ text }}</div>
+{% endspaceless %}
+{% endblock %}
+
+{% block badge %}
+{% spaceless %}
+<div class="badge">{{ text }}</div>
+{% endspaceless %}
+{% endblock %}
+
+{% block label %}
+{% spaceless %}
+<div class="label label-{{ type }}">{{ text }}</div>
+{% endspaceless %}
+{% endblock %}
