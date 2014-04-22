@@ -25,6 +25,8 @@
  */
 namespace O2\Bundle\UIBundle\Twig\Extension;
 
+use O2\Bundle\UIBundle\Twig\Lib\TwigTemplateLoader;
+
 /**
  * Oxygen UI Bundle Twig Badge Extension
  *
@@ -34,22 +36,19 @@ namespace O2\Bundle\UIBundle\Twig\Extension;
 class ComponentsExtension extends \Twig_Extension
 {
 	/**
+	 * @var string
+	 */
+	protected $templatePath;
+	
+	/**
 	 * @var \Twig_Environment
 	 */
 	protected $twig;
 	
-	/**
-	 * @var \Twig_Template
-	 */
-	protected $template;
-	
-	/**
-	 * @param \Twig_Environment $twig
-	 */
 	public function __construct(\Twig_Environment $twig, $template_path)
 	{
 		$this->twig = $twig;
-		$this->template	= $this->twig->loadTemplate($template_path);
+		$this->templatePath = $template_path;
 	}
 	
 	/**
@@ -75,7 +74,8 @@ class ComponentsExtension extends \Twig_Extension
 	 */
 	public function badgeFunction($text)
 	{
-		return $this->template->renderBlock('badge', array('text' => $text));
+		$template = $this->twig->loadTemplate($this->templatePath);
+		return $template->renderBlock('badge', array('text' => $text));
 	}
 	
 	/**
@@ -87,7 +87,8 @@ class ComponentsExtension extends \Twig_Extension
 	 */
 	public function alertFunction($text, $type = 'default')
 	{
-		return $this->template->renderBlock('alert', array('text' => $text, 'type' => $type));
+		$template = $this->twig->loadTemplate($this->templatePath);
+		return $template->renderBlock('alert', array('text' => $text, 'type' => $type));
 	}
 	
 	/**
@@ -99,7 +100,8 @@ class ComponentsExtension extends \Twig_Extension
 	 */
 	public function labelFunction($text, $type = 'default')
 	{
-		return $this->template->renderBlock('label', array('text' => $text, 'type' => $type));
+		$template = $this->twig->loadTemplate($this->templatePath);
+		return $template->renderBlock('label', array('text' => $text, 'type' => $type));
 	}
 	
 	/**
