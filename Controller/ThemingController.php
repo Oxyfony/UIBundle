@@ -33,15 +33,15 @@ use Symfony\Bundle\FrameworkBundle\Controller\Controller;
  * @author Nicolas Claverie <info@artscore-studio.fr>
  *
  */
-class TwbsThemingController extends Controller
+class ThemingController extends Controller
 {
 	/**
-	 * Twitter Bootstrap Component Test Display  
+	 * Components Test Display  
 	 */
 	public function componentThemingAction()
 	{
 		$this->get('o2_ui.flash_message')->info('This is a flash message');
-		return $this->render('O2UIBundle:TwbsTheming:component_theming.html.twig', array());
+		return $this->render('O2UIBundle:Theming:component_theming.html.twig', array());
 	}
 	
 	/**
@@ -154,6 +154,6 @@ class TwbsThemingController extends Controller
 	    	
 	    	->getForm();
     	
-    	return $this->render('O2UIBundle:TwbsTheming:form_theming.html.twig', array('form' => $form->createView()));
+    	return $this->render('O2UIBundle:Theming:form_theming.html.twig', array('form' => $form->createView()));
     }
 }

@@ -7,7 +7,7 @@
 	<parameters>
 		<parameter key="o2_ui.twig.form_extension.class">O2\Bundle\UIBundle\Twig\Extension\FormExtension</parameter>
 		<parameter key="o2_ui.twig.components_extension.class">O2\Bundle\UIBundle\Twig\Extension\ComponentsExtension</parameter>
-		<parameter key="o2_ui.twig.components_extension.template">O2UIBundle:TwbsTheming:twbs_components_div_layout.html.twig</parameter>
+		<parameter key="o2_ui.twig.components_extension.template">O2UIBundle:Theming:components_div_layout.html.twig</parameter>
 	</parameters>
 
 	<services>

@@ -4,8 +4,8 @@ o2_ui_welcome:
 
 o2_ui_twbs_form_theming:
     pattern: /twbs-form-theming
-    defaults: { _controller: 'O2UIBundle:TwbsTheming:formTheming' }
+    defaults: { _controller: 'O2UIBundle:Theming:formTheming' }
     
 o2_ui_twbs_component_theming:
     pattern: /twbs-component-theming
-    defaults: { _controller: 'O2UIBundle:TwbsTheming:componentTheming' }
+    defaults: { _controller: 'O2UIBundle:Theming:componentTheming' }

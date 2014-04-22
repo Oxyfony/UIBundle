@@ -25,8 +25,6 @@
  */
 namespace O2\Bundle\UIBundle\Twig\Extension;
 
-use O2\Bundle\UIBundle\Twig\Lib\TwigTemplateLoader;
-
 /**
  * Oxygen UI Bundle Twig Badge Extension
  *
