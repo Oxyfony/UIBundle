@@ -1,27 +1,12 @@
 <!DOCTYPE html>
 <html lang="fr">
 	<head>
-		{% block html_header %}
-		
-			{% block meta_title %}
-	        <title>Oxygen UI Bundle</title>
-	        {% endblock meta_title %}
+		{% block o2_head %}
 
-	        {% block meta_description %}
-	        <meta name="description" content="Oxyfony Community UI Bundle" />
-	        {% endblock meta_description %}
-
-	        {% block meta_keywords %}
-	        <meta name="keywords" content="oxyfony, Oxygen UI Bundle" />
-	        {% endblock meta_keywords %}
-
-	        {% block meta_author %}
-	        <meta name="author" content="Oxygen Community (oxygen@soletic.org)" />
-	        {% endblock meta_author %}
-
+			{% block o2_head_metas %}{% endblock %}
         	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-	        {% block stylesheets %}
+	        {% block o2_head_stylesheets %}
         	<!-- Latest compiled and minified CSS -->
 			<link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
 
@@ -34,27 +19,29 @@
 			
 	        {% endblock %}
 
-        	{% block jsheader %}{% endblock %}
+        	{% block o2_head_js %}{% endblock %}
 
+        	{% block o2_head_compatibility %}
         	<!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     		<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     		<!--[if lt IE 9]>
       			<script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
       			<script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
     		<![endif]-->
+    		{% endblock %}
     		
 		{% endblock %}
 	</head>
 	
-	{% block body_tag %}
+	{% block o2_body_tag %}
 	<body>
 	{% endblock %}
-		{% block flash_message %}
+		{% block o2_body_flash_message %}
 		{% include 'O2UIBundle::flash_messages.html.twig' %}
 		{% endblock %}
-		{% block body_content %}{% endblock %}
+		{% block o2_body_content %}{% endblock %}
 		
-		{% block jsfooter %}
+		{% block o2_body_js %}
 		
 		<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>

@@ -11,4 +11,4 @@ For activate Twitter Bootstrap Form Theming, add bundle's file in application co
    twig:
        form:
            resources:
-               - 'O2UIBundle:twbs_theming:twbs_form_div_layout.html.twig' 
+               - 'O2UIBundle:Theming:form_div_layout.html.twig' 
