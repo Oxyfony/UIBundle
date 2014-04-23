@@ -7,7 +7,7 @@ Documentation
 -------------
 The bulk of the documentation is stored in the Resources/docs/index.md file in bundle :
 
-`Read the documentation for master <https://github.com/Oxyfony/UIBundle/blob/master/Resources/doc/index.rst>`_.
+[Read the documentation for master](https://github.com/Oxyfony/UIBundle/blob/master/Resources/doc/index.rst).
 
 Installation
 ------------
@@ -39,10 +39,10 @@ SOFTWARE.
 
 About
 -----
-Oxygen UI Bundle is an `Oxygen Community <http://oxygen.soletic.org>`_ initiative.
+Oxygen UI Bundle is an [Oxygen Community](http://oxygen.soletic.org) initiative.
 
 Reporting an issue or a feature request
 ---------------------------------------
-Issues and features requests are tracked in the `GitHub issue tracker <https://github.com/Oxyfony/UIBundle/issues>`_.
+Issues and features requests are tracked in the [GitHub issue tracker](https://github.com/Oxyfony/UIBundle/issues).
 
 When reporting a bug, it may be a good idea to reproduce it in a basic project built using the Symfony Standard Edition to allow developers of the bundle to reproduce the issue by simply cloning it and following steps.
