@@ -3,6 +3,8 @@ Oxygen UI Bundle
 
 Oxygen UI Bundle is a Symfony 2 bundle for create User Interface in your Symfony 2 application based on jQuery and Twitter Bootstrap.
 
+[![Build Status](https://travis-ci.org/Oxyfony/UIBundle.svg?branch=master)](https://travis-ci.org/Oxyfony/UIBundle)
+
 Documentation
 -------------
 The bulk of the documentation is stored in the Resources/docs/index.md file in bundle :
