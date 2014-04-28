@@ -14,7 +14,7 @@
 			<link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap-theme.min.css">
 			
 			{% stylesheets '@O2UIBundle/Resources/public/css/*' %}
-			<link rel="stylesheet" href="{{ asset_url }}" />	
+			<link rel="stylesheet" href="{{ asset_url }}" />
 			{% endstylesheets %}
 			
 	        {% endblock %}
@@ -36,9 +36,7 @@
 	{% block o2_body_tag %}
 	<body>
 	{% endblock %}
-		{% block o2_body_flash_message %}
-		{% include 'O2UIBundle::flash_messages.html.twig' %}
-		{% endblock %}
+
 		{% block o2_body_content %}{% endblock %}
 		
 		{% block o2_body_js %}

@@ -7,6 +7,7 @@
 	<parameters>
 		<parameter key="o2_ui.twig.form_extension.class">O2\Bundle\UIBundle\Twig\Extension\FormExtension</parameter>
 		<parameter key="o2_ui.twig.components_extension.class">O2\Bundle\UIBundle\Twig\Extension\ComponentsExtension</parameter>
+		<parameter key="o2_ui.twig.flashalerts_extension.class">O2\Bundle\UIBundle\Twig\Extension\FlashAlertsExtension</parameter>
 		<parameter key="o2_ui.twig.components_extension.template">O2UIBundle:Theming:components_div_layout.html.twig</parameter>
 	</parameters>
 
@@ -21,6 +22,13 @@
         	<argument>%o2_ui.twig.components_extension.template%</argument>
             <tag name="twig.extension" />
         </service>
+        
+        <service id="o2_ui.twig.flashalerts_extension" class="%o2_ui.twig.flashalerts_extension.class%">
+        	<argument type="service" id="session" />
+        	<tag name="twig.extension" />
+        </service>
+        
+        <service id="o2_ui.alerts" alias="o2_ui.twig.flashalerts_extension" />
         
 	</services>
 
