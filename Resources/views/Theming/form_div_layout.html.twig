@@ -19,7 +19,7 @@
 
 {% block form_row %}
 {% spaceless %}
-    <div class="form-group">
+    <div class="form-group form-row-{{ id }}{{ (errors|length>0)?' has-error':'' }}">
         {{ form_label(form) }}
         {{ form_errors(form) }}
         {{ form_widget(form) }}
@@ -46,8 +46,8 @@
 {% block money_widget %}
 {% spaceless %}
 	<div class="input-group">
-	    {{ money_pattern|replace({ 
-	    	'{{ widget }}': block('form_widget_simple') ~ '<span class="input-group-addon">' 
+	    {{ money_pattern|replace({
+	    	'{{ widget }}': block('form_widget_simple') ~ '<span class="input-group-addon">'
 		})|raw }}
 		</span>
 	</div>
@@ -219,3 +219,15 @@
     <button type="{{ type|default('button') }}" {{ block('button_attributes') }}>{{ label|trans({}, translation_domain) }}</button>
 {% endspaceless %}
 {% endblock button_widget %}
+
+{% block form_errors %}
+{% spaceless %}
+    {% if errors|length > 0 %}
+    <ul class="list-group">
+        {% for error in errors %}
+            <li class="list-group-item list-group-item-danger">{{ error.message }}</li>
+        {% endfor %}
+    </ul>
+    {% endif %}
+{% endspaceless %}
+{% endblock form_errors %}
