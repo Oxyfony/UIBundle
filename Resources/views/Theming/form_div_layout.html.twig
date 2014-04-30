@@ -10,7 +10,7 @@
     {% else %}
         {% set form_method = "POST" %}
     {% endif %}
-    <form method="{{ form_method|lower }}" action="{{ action }}"{% for attrname, attrvalue in attr %} {{ attrname }}="{{ attrvalue }}"{% endfor %}{% if multipart %} enctype="multipart/form-data"{% endif %} role="form">
+    <form{{ (app.environment == 'dev')?' novalidate':'' }} method="{{ form_method|lower }}" action="{{ action }}"{% for attrname, attrvalue in attr %} {{ attrname }}="{{ attrvalue }}"{% endfor %}{% if multipart %} enctype="multipart/form-data"{% endif %} role="form">
     {% if form_method != method %}
         <input type="hidden" name="_method" value="{{ method }}" />
     {% endif %}
