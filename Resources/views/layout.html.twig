@@ -19,7 +19,13 @@
 			
 	        {% endblock %}
 
-        	{% block o2_head_js %}{% endblock %}
+        	{% block o2_head_js %}
+        	<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+			<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+	    		
+			<!-- Latest compiled and minified JavaScript -->
+			<script src="//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
+        	{% endblock %}
 
         	{% block o2_head_compatibility %}
         	<!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
@@ -40,12 +46,6 @@
 		{% block o2_body_content %}{% endblock %}
 		
 		{% block o2_body_js %}
-		
-		<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
-    		
-		<!-- Latest compiled and minified JavaScript -->
-		<script src="//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
 		
 		{% javascripts '@O2UIBundle/Resources/public/js/*' %}
 		<script src="{{ asset_url }}"></script>
