@@ -22,9 +22,6 @@
         	{% block o2_head_js %}
         	<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
 			<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
-	    		
-			<!-- Latest compiled and minified JavaScript -->
-			<script src="//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
         	{% endblock %}
 
         	{% block o2_head_compatibility %}
@@ -46,11 +43,11 @@
 		{% block o2_body_content %}{% endblock %}
 		
 		{% block o2_body_js %}
-		
+		<!-- Latest compiled and minified JavaScript -->
+		<script src="//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
 		{% javascripts '@O2UIBundle/Resources/public/js/*' %}
 		<script src="{{ asset_url }}"></script>
 		{% endjavascripts %}
-		
 		{% endblock %}
 		
 	</body>

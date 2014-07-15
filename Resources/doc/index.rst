@@ -9,4 +9,5 @@ Documentation
    :glob:
    
    installation
-   book/flash_alerts.rst
+   book
+   cookbook

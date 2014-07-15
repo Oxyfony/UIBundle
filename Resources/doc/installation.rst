@@ -27,6 +27,7 @@ Installation steps :
 2. Enable the bundle.
 
 Step 1 : Download O2UIBundle using composer
++++++++++++++++++++++++++++++++++++++++++++
 
 Add O2UIBundle in your composer.json :
 
@@ -54,6 +55,7 @@ A different way is to add it drectly with the command line below :
 Composer will install the bundle to your project's vendor/oxyfony directory.
 
 Step 2 : Enable the bundle
+++++++++++++++++++++++++++
 
 Enable the bundle in the kernel :
 
@@ -68,3 +70,11 @@ Enable the bundle in the kernel :
        );
    }
    
+Ajouter les composants CSS and JS à vos vues de l'application
+-------------------------------------------------------------
+
+Après avoir installé le bundle, vous devez installé les composants CSS et JS et les inclure dans les
+vues de votre projet.
+
+
+
