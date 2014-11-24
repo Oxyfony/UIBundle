@@ -70,11 +70,8 @@ Enable the bundle in the kernel :
        );
    }
    
-Ajouter les composants CSS and JS à vos vues de l'application
--------------------------------------------------------------
+Add CSS and JS compenents for your project
+------------------------------------------
 
-Après avoir installé le bundle, vous devez installé les composants CSS et JS et les inclure dans les
-vues de votre projet.
-
-
-
+After the installation of the bundle in your project, you have to donwload and install CSS or JS files according to the 
+`Symfony Good Practices Guide <http://symfony.com/en/doc/current/cookbook/bundles/best_practices.html#vendors>`_.
